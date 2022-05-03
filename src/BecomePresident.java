@@ -19,12 +19,12 @@ public class BecomePresident {
                 apt[0][p] = p + 1;
             }
 
-            for(int j = 1; j < k + 1; j++){
-                for(int l = 0; l < n + 1; l++){
+            for(int j = 1; j < k + 1; j++){ // floor
+                for(int l = 0; l < n + 1; l++){ // number
                     if(l == 0){
                         apt[j][l] = 1;
                     }else{
-                        apt[j][l] = apt[j][l-1] + apt[j - 1][l];
+                        apt[j][l] = apt[j][l-1] + apt[j - 1][l];    // value = left + down
                     }
                 }
             }
